@@ -31,6 +31,74 @@ header h3 {
     align-items: center;
 }
 
+.imagecarousel {
+    position: relative;
+}
+
+.image {
+    display: none;
+}
+
+.image:first-of-type {
+    display: block;
+}
+
+.image img {
+    border-radius: 10px;
+}
+
+.last, .next {
+    position: absolute;
+    font-size: 200%;
+    color: rgba(0, 0, 139, 0.649);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: .25em;
+    border-radius: 50vh;
+    transition: all ease-in-out 300ms;
+}
+
+.last {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.last:hover, .next:hover {
+    background-color: black;
+    color: gold;
+    cursor: pointer;
+}
+
+.dots {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 9px;
+}
+
+.dot {
+    width: 20px;
+    height: 9px;
+    border-radius: 50vh;
+    background-color: silver;
+    cursor: pointer;                 
+}
+
+.active {
+    background-color: gold;
+}
+
+.fadeout {
+    animation: fade 2000ms;
+}
+
+@keyframes fade {
+    from {opacity: .2;}
+    to {opacity: 1;}
+}
 
 footer {
     padding: 2em 0;
@@ -40,4 +108,46 @@ footer {
     justify-content: center;
     border-top: 3px ridge silver;
     margin-top: 2em;
+}
+
+@media (max-width: 800px) {
+    .imagecarousel img {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        max-width: 35%;
+    }
+
+    header h2 {
+        font-size: 150%;
+    }
+
+    header h3 {
+        font-size: 100%;
+    }
+
+    .last, .next {
+        padding: .05em;
+        font-size: 150%;
+    }
+
+    .last {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
+    .dot {
+        width: 16px;
+        height: 5px;
+    }
 }

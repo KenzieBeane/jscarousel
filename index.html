@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/79c578fa44.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <title>JS Slideshow</title>
 </head>
@@ -30,10 +33,16 @@
                 <div class="image fadeout"><img src="images/frog_11.jpg" alt=""></div>
                 <div class="image fadeout"><img src="images/frog_12.jpg" alt=""></div>
                 <div class="image fadeout"><img src="images/frog_13.jpg" alt=""></div>
+                <div class="last">
+                    <i class="fa-solid fa-chevron-left" onclick="showImage(-1)"></i>
+                </div>
+                <div class="next">
+                    <i class="fa-solid fa-chevron-right" onclick="showImage(1)"></i>
+                </div>
             </div>
         </div>
         <div class="dots">
-            <span class="dot"></span>
+            <span class="dot active"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
@@ -49,7 +58,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy;<span id="copyright"></span> Michael Roberts Productions</p>
+        <p>&copy;<span id="copyright"></span> Makenzie Beane Productions</p>
     </footer>
 </body>
 </html>
